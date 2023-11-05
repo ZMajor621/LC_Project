@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class SinnerViewHolder extends RecyclerView.ViewHolder {
     TextView textViewName;
     TextView textViewHealth;
-    //add textview rarity
     TextView textViewRarity;
     TextView textViewLowSpeed;
-    TextView textViewHighSpeed;
+    TextView textViewHighSpeed; //unused
     TextView textViewSlash;
     TextView textViewBlunt;
     TextView textViewPierce;
@@ -25,12 +24,17 @@ public class SinnerViewHolder extends RecyclerView.ViewHolder {
     ImageView imageViewAttackType1;
     ImageView imageViewAttackType2;
     ImageView imageViewAttackType3;
+
+    /**
+     * Constructor for SinnerViewHolder
+     * @param itemView
+     */
     public SinnerViewHolder(@NonNull View itemView) {
         super(itemView);
         textViewName = (TextView) itemView.findViewById(R.id.textViewNameViewer);
         textViewHealth = (TextView) itemView.findViewById(R.id.textViewHealthViewer);
         textViewRarity = (TextView) itemView.findViewById(R.id.textViewRarityViewer);
-        textViewLowSpeed = (TextView) itemView.findViewById(R.id.textViewSpeedViewer); // change to sinner to combine speeds in a string, testing with low speed
+        textViewLowSpeed = (TextView) itemView.findViewById(R.id.textViewSpeedViewer); // uses low speed but combines both speeds
 
         textViewSlash = (TextView) itemView.findViewById(R.id.textViewSlashViewer);
         textViewBlunt = (TextView) itemView.findViewById(R.id.textViewBluntViewer);

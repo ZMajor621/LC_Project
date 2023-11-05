@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextHealth;
     EditText editTextSpeedLow;
     EditText editTextSpeedHigh;
+
     Spinner spinnerAttack1;
     Spinner spinnerAttack2;
     Spinner spinnerAttack3;
@@ -27,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerSin2;
     Spinner spinnerSin3;
 
-
-
     Button buttonSaveSinner;
     Button buttonToViewer;
     Spinner spinnerRarity;
@@ -36,14 +35,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerPierce;
     Spinner spinnerSlash;
     MainViewModel mainViewModel;
-
-    String attackType1;
-    String attackType2;
-    String attackType3;
-
-    String sinAffinity1;
-    String sinAffinity2;
-    String sinAffinity3;
 
     Sinner sinner;
 
@@ -108,7 +99,10 @@ public class MainActivity extends AppCompatActivity {
                 String sin3 = spinnerSin3.getSelectedItem().toString();
 
                 sinner = new Sinner(name, rarity, health, speedLow, speedHigh, blunt, pierce, slash, attack1, attack2, attack3, sin1, sin2, sin3);
-                //mainViewModel.insert(name, rarity, health, speedLow, speedHigh, blunt, pierce, slash);
+
+                Intent secActIntent = new Intent(MainActivity.this, SecondMainActivity.class);
+                secActIntent.putExtra("sinner", sinner);
+                startActivity(secActIntent);
             }
         });
     }
@@ -393,6 +387,9 @@ public class MainActivity extends AppCompatActivity {
         //-------------------------------------
     }
 
+    /**
+     * Set up button to move to viewer without saving a new sinner
+     */
     private void setupViewerButton() {
         buttonToViewer = findViewById(R.id.buttonToViewer);
         buttonToViewer.setOnClickListener(new View.OnClickListener() {
@@ -400,7 +397,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Call the second activity
                 Intent secActIntent = new Intent(MainActivity.this, SecondMainActivity.class);
-                secActIntent.putExtra("sinner", sinner);
                 startActivity(secActIntent);
             }
         });

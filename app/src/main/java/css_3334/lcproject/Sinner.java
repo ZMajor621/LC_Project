@@ -6,6 +6,9 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
+/**
+ * Sinner holds the stats for a character
+ */
 @Entity
 public class Sinner implements Serializable {
     @PrimaryKey(autoGenerate = true)
@@ -15,13 +18,6 @@ public class Sinner implements Serializable {
     public int health;
     public int speedLow;
     public int speedHigh;
-
-    //public Skill skills[] = new Skill[3];
-
-    @Ignore
-    final String RARITY[] = {"0", "00", "000"};
-    @Ignore
-    final String RESISTANCES[] = {"Fatal [x2]", "Normal [x1]", "Ineff. [x0.5]"};
 
     public String blunt;
     public String pierce;
@@ -35,7 +31,23 @@ public class Sinner implements Serializable {
     public String sin2;
     public String sin3;
 
-
+    /**
+     * Constructor for sinner
+     * @param name
+     * @param rarity
+     * @param health
+     * @param speedLow
+     * @param speedHigh
+     * @param blunt
+     * @param pierce
+     * @param slash
+     * @param attack1
+     * @param attack2
+     * @param attack3
+     * @param sin1
+     * @param sin2
+     * @param sin3
+     */
     public Sinner (String name, String rarity, int health, int speedLow, int speedHigh, String blunt, String pierce, String slash, String attack1, String attack2, String attack3, String sin1, String sin2, String sin3)
     {
         this.name = name;

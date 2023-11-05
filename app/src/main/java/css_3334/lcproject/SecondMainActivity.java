@@ -49,34 +49,39 @@ public class SecondMainActivity extends AppCompatActivity {
         setContentView(R.layout.sinner_viewer);
         context = getApplicationContext();
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        //Bind
 
         //Extras from Main
-        Bundle extras = getIntent().getExtras();
-        Sinner sinner = (Sinner) extras.getSerializable("sinner");
-        name = sinner.getName();
-        rarity = sinner.getRarity();
-        health = sinner.getHealth();
-        speedLow = sinner.getSpeedLow();
-        speedHigh = sinner.getSpeedHigh();
-        blunt = sinner.getBlunt();
-        pierce = sinner.getPierce();
-        slash = sinner.getSlash();
-        attack1 = sinner.getAttack1();
-        attack2 = sinner.getAttack2();
-        attack3 = sinner.getAttack3();
-        sin1 = sinner.getSin1();
-        sin2 = sinner.getSin2();
-        sin3 = sinner.getSin3();
+        Intent intent = getIntent();
+        if(intent.hasExtra("sinner"))
+        {
+            Bundle extras = getIntent().getExtras();
+            Sinner sinner = (Sinner) extras.getSerializable("sinner");
+            name = sinner.getName();
+            rarity = sinner.getRarity();
+            health = sinner.getHealth();
+            speedLow = sinner.getSpeedLow();
+            speedHigh = sinner.getSpeedHigh();
+            blunt = sinner.getBlunt();
+            pierce = sinner.getPierce();
+            slash = sinner.getSlash();
+            attack1 = sinner.getAttack1();
+            attack2 = sinner.getAttack2();
+            attack3 = sinner.getAttack3();
+            sin1 = sinner.getSin1();
+            sin2 = sinner.getSin2();
+            sin3 = sinner.getSin3();
 
-        //Save to database
-        mainViewModel.insert(name, rarity, health, speedLow, speedHigh, blunt, pierce, slash, attack1, attack2, attack3, sin1, sin2, sin3);
-        //setupReturnButton();
+            //Save to database
+            mainViewModel.insert(name, rarity, health, speedLow, speedHigh, blunt, pierce, slash, attack1, attack2, attack3, sin1, sin2, sin3);
+        }
         setupLiveDataObserver();
         setupRecycleView();
         setupReturnButton();
     }
 
+    /**
+     * Setup Recycle view with adapter
+     */
     private void setupRecycleView()
     {
         recyclerViewSinner = findViewById(R.id.SinnerRecyclerView);
@@ -85,6 +90,9 @@ public class SecondMainActivity extends AppCompatActivity {
         recyclerViewSinner.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    /**
+     * Setup button to return to main activity
+     */
     private void setupReturnButton() {
         buttonReturn = findViewById(R.id.buttonReturn);
         buttonReturn.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +105,9 @@ public class SecondMainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Setup Live Data Observer to update Recycle view
+     */
     private void setupLiveDataObserver() {
         // Create the observer for the list of heart rates
         mainViewModel.getAll().observe(this, new Observer<List<Sinner>>() {

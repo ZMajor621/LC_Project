@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageViewSinViewer3"
@@ -17,7 +17,7 @@
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/_4"
         app:layout_constraintStart_toStartOf="@+id/imageViewSinViewer3"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer3" />
 
@@ -25,7 +25,7 @@
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+5"
+        android:text="@string/_5"
         app:layout_constraintStart_toEndOf="@+id/imageViewAttackViewer3"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer3" />
 
@@ -33,7 +33,7 @@
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amt. x1"
+        android:text="@string/amt_x1"
         app:layout_constraintStart_toEndOf="@+id/imageViewSinViewer3"
         app:layout_constraintTop_toBottomOf="@+id/imageView17" />
 
@@ -57,7 +57,7 @@
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="x3"
+        android:text="@string/x3"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
         app:layout_constraintTop_toBottomOf="@+id/textViewSkillViewer3" />
 
@@ -65,9 +65,9 @@
         android:id="@+id/textViewSkillViewer3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:text="Skill 3"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="100dp"
+        android:text="@string/skill_32"
+        app:layout_constraintStart_toEndOf="@+id/textViewSkill1Viewer2"
         app:layout_constraintTop_toTopOf="@+id/textViewSkill1Viewer2" />
 
     <ImageView
@@ -82,7 +82,7 @@
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/_41"
         app:layout_constraintStart_toStartOf="@+id/imageViewSinViewer2"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer2" />
 
@@ -90,7 +90,7 @@
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+5"
+        android:text="@string/_51"
         app:layout_constraintStart_toEndOf="@+id/imageViewAttack1Viewer2"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer2" />
 
@@ -98,7 +98,7 @@
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amt. x2"
+        android:text="@string/amt_x2"
         app:layout_constraintStart_toEndOf="@+id/imageViewSinViewer2"
         app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
@@ -122,7 +122,7 @@
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="x3"
+        android:text="@string/x31"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/textViewSkill1Viewer2" />
 
@@ -131,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:text="Skill 2"
+        android:text="@string/skill_21"
         app:layout_constraintStart_toEndOf="@+id/textViewSkill1Viewer"
         app:layout_constraintTop_toTopOf="@+id/textViewSkill1Viewer" />
 
@@ -159,7 +159,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="LCB SInner Faust"
+        android:text="@string/lcb_sinner_faust"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -168,26 +168,24 @@
         android:id="@+id/textViewHealthViewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:text="186"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        android:text="@string/_186"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
 
     <TextView
         android:id="@+id/textViewSpeedViewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:text="2~4"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/_2_4"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Resistances:"
+        android:layout_marginTop="16dp"
+        android:text="@string/resistances1"
         app:layout_constraintStart_toStartOf="@+id/textViewNameViewer"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameViewer" />
 
@@ -195,7 +193,7 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+5"
+        android:text="@string/_52"
         app:layout_constraintStart_toEndOf="@+id/imageViewAttack1Viewer"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer1" />
 
@@ -203,7 +201,7 @@
         android:id="@+id/textView33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/_42"
         app:layout_constraintStart_toStartOf="@+id/imageViewSinViewer1"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSinViewer1" />
 
@@ -227,11 +225,10 @@
         android:id="@+id/textViewSkill1Viewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:text="Skill 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        android:layout_marginTop="8dp"
+        android:text="@string/skill_11"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -245,7 +242,7 @@
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="x3"
+        android:text="@string/x32"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/textViewSkill1Viewer" />
 
@@ -253,15 +250,17 @@
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toTopOf="@+id/textView27"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
         app:srcCompat="@drawable/slash" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/textViewHealthViewer"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewRarityViewer"
         app:layout_constraintTop_toTopOf="@+id/textViewRarityViewer"
         app:srcCompat="@drawable/hp" />
 
@@ -269,7 +268,8 @@
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSpeedViewer"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewHealthViewer"
         app:layout_constraintTop_toTopOf="@+id/textViewHealthViewer"
         app:srcCompat="@drawable/speed" />
 
@@ -277,7 +277,7 @@
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amt. x3"
+        android:text="@string/amt_x32"
         app:layout_constraintStart_toEndOf="@+id/imageViewSinViewer1"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -285,7 +285,7 @@
         android:id="@+id/textViewSlashViewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
@@ -293,7 +293,7 @@
         android:id="@+id/textViewPierceViewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview2"
         app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
@@ -301,7 +301,7 @@
         android:id="@+id/textViewBluntViewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview3"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
@@ -310,8 +310,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="TextView"
+        android:text="@string/textview4"
         app:layout_constraintStart_toEndOf="@+id/textViewNameViewer"
         app:layout_constraintTop_toTopOf="@+id/textViewNameViewer" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAttack1Viewer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

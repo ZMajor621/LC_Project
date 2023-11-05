@@ -20,6 +20,10 @@ public class SinnerAdapter extends RecyclerView.Adapter<SinnerViewHolder>{
 
     private List<Sinner> sinnerList;
 
+    /**
+     * Updates Sinner list
+     * @param newSinnerList
+     */
     public void updateSinnerList(List<Sinner> newSinnerList) {sinnerList = newSinnerList;}
 
     public SinnerAdapter(Application application, Context context)
@@ -59,6 +63,11 @@ public class SinnerAdapter extends RecyclerView.Adapter<SinnerViewHolder>{
         holder.imageViewAttackType3.setImageResource(getImageViewAttack(currentSinner.getAttack3()));
     }
 
+    /**
+     * Determines the drawable id to be used depending on attack type
+     * @param attack
+     * @return
+     */
     public int getImageViewAttack(String attack)
     {
         int imageId;
@@ -81,6 +90,11 @@ public class SinnerAdapter extends RecyclerView.Adapter<SinnerViewHolder>{
         return imageId;
     }
 
+    /**
+     * Determines the sin drawable depending on sin type
+     * @param sin
+     * @return
+     */
     public int getImageViewSin(String sin)
     {
         int imageId;
