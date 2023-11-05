@@ -39,7 +39,7 @@
     <string name="textview3">TextView</string>
     <string name="textview4">TextView</string>
     <string name="sinner_view">Sinner View</string>
-    <string name="return">Return</string>
+    <string name="return_button">Return</string>
 
     <string-array name="rarity_array">
         <item>0</item>
