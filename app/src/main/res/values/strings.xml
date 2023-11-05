@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LC Project</string>
+
+    <string-array name="rarity_array">
+        <item>0</item>
+        <item>00</item>
+        <item>000</item>
+    </string-array>
+    <string-array name="resistance_array">
+        <item>Fatal [x2]</item>
+        <item>Normal [x1]</item>
+        <item>Ineff. [x0.5]</item>
+    </string-array>
+    <string-array name="sin_affinity_array">
+        <item>Wrath</item>
+        <item>Lust</item>
+        <item>Sloth</item>
+        <item>Gluttony</item>
+        <item>Gloom</item>
+        <item>Pride</item>
+        <item>Envy</item>
+    </string-array>
+    <string-array name="attack_type_array">
+        <item>Slash</item>
+        <item>Blunt</item>
+        <item>Pierce</item>
+    </string-array>
+    <string-array name="skill_copies_array">
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+</resources>
