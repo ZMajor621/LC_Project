@@ -99,8 +99,9 @@ public class SecondMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("CIS 3334", "Return button clicked");   // log button click for debugging using "CIS 3334" tag
-                Intent intent = new Intent();
-                startActivity(intent);
+                //Intent intent = new Intent();
+                //startActivity(intent);
+                finish();
             }
         });
     }
